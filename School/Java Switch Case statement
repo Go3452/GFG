@@ -1,0 +1,16 @@
+class Solution{
+    static double switchCase(int choice, List<Double> arr){
+        double n;
+        switch(choice)
+        {
+         case 1 :{
+              n=arr.get(0)*arr.get(0)*3.14159265359;
+             break;
+         }
+         default :{
+             n=arr.get(0)*arr.get(1);
+         }
+        }
+        return n;
+    }
+}
