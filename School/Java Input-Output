@@ -1,0 +1,5 @@
+class Solution{
+    static void printIntString(String S,int N){
+        System.out.println("The input string :" + S + "\nThe input integer :" + N);
+    }
+}
