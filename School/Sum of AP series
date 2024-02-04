@@ -1,0 +1,13 @@
+class Solution{
+    static long count_divisors(int N){
+        long count=0;
+		 for(int i=3;i<=N/2;i+=3)
+		 {
+		  if(N%i==0)
+		   count++;
+		 }
+		 if(N%3==0)
+		  count++;
+		 return count;
+    }
+}
