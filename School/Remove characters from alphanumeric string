@@ -1,0 +1,32 @@
+class Solution {
+    String removeCharacters(String S) {
+        S=S.toLowerCase();
+        S=S.replace("a","");
+        S=S.replace("b","");
+        S=S.replace("c","");
+        S=S.replace("d","");
+        S=S.replace("e","");
+        S=S.replace("f","");
+        S=S.replace("g","");
+        S=S.replace("h","");
+        S=S.replace("i","");
+        S=S.replace("j","");
+        S=S.replace("k","");
+        S=S.replace("l","");
+        S=S.replace("m","");
+        S=S.replace("n","");
+        S=S.replace("o","");
+        S=S.replace("p","");
+        S=S.replace("q","");
+        S=S.replace("r","");
+        S=S.replace("s","");
+        S=S.replace("t","");
+        S=S.replace("u","");
+        S=S.replace("v","");
+        S=S.replace("w","");
+        S=S.replace("x","");
+        S=S.replace("y","");
+        S=S.replace("z","");
+        return S;
+    }
+}
