@@ -1,0 +1,23 @@
+class Solution {
+    int isPerfect(int N) {
+        int n=N;
+        int sum=0;
+        while(n>0)
+        {
+         int r=n%10;
+         sum+=factorial(r);
+         n/=10;
+        }
+        if(sum==N)
+         return 1;
+        else
+         return 0;
+    }
+    int factorial(int n)
+    {
+     int fact=1;
+     for(int i=2;i<=n;i++)
+      fact*=i;
+     return fact;
+    }
+}
