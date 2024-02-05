@@ -1,0 +1,13 @@
+class Solution{
+    static void printPattern(int N){
+        String ans="";
+        for(int i=0;i<N;i++)
+        {
+         ans="";
+         for(int j=0;j<=i;j++)
+          ans+="*";
+         System.out.print(ans);
+         System.out.print(" ");
+        }
+    }
+}
