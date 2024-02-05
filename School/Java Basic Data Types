@@ -1,0 +1,17 @@
+class Solution {
+
+    int javaIntType(Scanner sc) {
+        int ans=sc.nextInt();
+        return ans;
+    }
+    
+    String javaStringType(Scanner sc) {
+        String ans=sc.next();
+        return ans;
+    }
+    
+    float javaFloatType(Scanner sc) {
+        float ans=sc.nextFloat();
+        return ans;
+    }
+};
