@@ -1,0 +1,15 @@
+class Solution{
+    static ArrayList<Integer> getSum(int N){
+        ArrayList<Integer> arr = new ArrayList<Integer>(2);
+        arr.add(0);
+        arr.add(0);
+        for(int i=1;i<=N;i++)
+        {
+         if(i%2==0)
+          arr.set(0,arr.get(0)+i);
+         else
+          arr.set(1,arr.get(1)+i);
+        }
+        return arr;
+    }
+}
