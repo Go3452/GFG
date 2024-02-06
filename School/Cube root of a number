@@ -1,0 +1,8 @@
+class Solution {
+    static int cubeRoot(int N) {
+        int i;
+        for(i=1;i*i*i<=N;i++)
+         ;
+        return i-1;
+    }
+};
