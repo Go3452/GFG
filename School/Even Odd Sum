@@ -1,0 +1,15 @@
+class Solution {
+    ArrayList<Integer> EvenOddSum(int N, int Arr[]) {
+        ArrayList<Integer> arr = new ArrayList<Integer>();
+        arr.add(0);
+        arr.add(0);
+        for(int i=0,j=1;i<N;i++,j++)
+        {
+         if(j%2==0)
+          arr.set(1,arr.get(1)+Arr[i]);
+         else
+          arr.set(0,arr.get(0)+Arr[i]);
+        }
+        return arr;
+    }
+}
