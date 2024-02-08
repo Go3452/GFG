@@ -1,0 +1,9 @@
+class Solution
+{
+    public int sum_of_ap(int n, int a, int d)
+    {
+     int N=a+(n-1)*d;
+     int sum=n*(a+N)/2;
+     return sum;
+    }
+}
