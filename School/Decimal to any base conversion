@@ -1,0 +1,30 @@
+class Solution{
+    static String getNumber(int B, int N){
+        String ans="";
+        while(N>0)
+        {
+         int r=N%B;
+         switch(r)
+         {
+          case 0:ans="0"+ans;break;
+          case 1:ans="1"+ans;break;
+          case 2:ans="2"+ans;break;
+          case 3:ans="3"+ans;break;
+          case 4:ans="4"+ans;break;
+          case 5:ans="5"+ans;break;
+          case 6:ans="6"+ans;break;
+          case 7:ans="7"+ans;break;
+          case 8:ans="8"+ans;break;
+          case 9:ans="9"+ans;break;
+          case 10:ans="A"+ans;break;
+          case 11:ans="B"+ans;break;
+          case 12:ans="C"+ans;break;
+          case 13:ans="D"+ans;break;
+          case 14:ans="E"+ans;break;
+          case 15:ans="F"+ans;break;
+         }
+         N/=B;
+        }
+        return ans; 
+    }
+}
