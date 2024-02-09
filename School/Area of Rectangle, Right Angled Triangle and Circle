@@ -1,0 +1,9 @@
+class Solution {
+    static int[] getAreas(int L , int W , int B , int H , int R) {
+        int ans[]=new int[3];
+        ans[0]=L*W;
+        ans[1]=B*H/2;
+        ans[2]=(int)(3.14*R*R);
+        return ans;
+    }
+};
