@@ -1,0 +1,21 @@
+class Solution{
+    static long sequence(int n){
+       long ans=0,sum;
+       int count=1,m=1000000007;
+       for(int i=0;i<n;i++)
+       {
+        sum=1;
+        for(int j=0;j<=i;j++)
+        {
+         sum*=count;
+         if(sum>=m)
+          sum=sum%m;
+         count++;
+        }
+        ans+=sum;
+        if(ans>=m)
+         ans=ans%m;
+       }
+       return ans;
+    }
+}
