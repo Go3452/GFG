@@ -1,0 +1,16 @@
+class Solution{
+        
+    static int search(int arr[], int N, int X)
+    {
+     int i;
+     for(i=0;i<N;i++)
+     {
+      if(arr[i]==X)
+       break;
+     }
+     if(i==N)
+      return -1;
+     return i;
+    }
+    
+}
