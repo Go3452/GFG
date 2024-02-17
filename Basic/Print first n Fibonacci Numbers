@@ -1,0 +1,23 @@
+class Solution
+{
+    public static long[] printFibb(int n) 
+    {
+     long ans[] = new long[n];
+     if(n==1)
+     {
+      ans[0]=1;
+      return ans;
+     }
+     long a=1,b=1,c;
+     ans[0]=a;
+     ans[1]=b;
+     for(int i=2;i<n;i++)
+     {
+      c=a+b;
+      a=b;
+      b=c;
+      ans[i]=c;
+     }
+     return ans;
+    }
+}
