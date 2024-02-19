@@ -1,0 +1,8 @@
+class Solution {
+    static int countSquares(int N) {
+        int i=1,count=0;
+        for(;i*i<N;i++)
+         count++;
+        return count;
+    }
+}
