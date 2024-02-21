@@ -1,0 +1,8 @@
+class Solution {
+    ArrayList<String> pattern(String S) {
+        ArrayList<String> arr=new ArrayList<String>(S.length());
+        for(int i=0,j=S.length();j>0;j--)
+         arr.add(S.substring(i,j));
+        return arr;
+    }
+};
