@@ -1,0 +1,10 @@
+class Solution
+{
+    public long[] find(int l, int b, int h)
+    {
+     long ans[]=new long[2];
+     ans[0]=2*(((long)l*(long)b)+((long)b*(long)h)+((long)h*(long)l));
+     ans[1]=(long)l*(long)b*(long)h;
+     return ans;
+    }
+}
