@@ -1,0 +1,31 @@
+class Solution {
+    public static ArrayList<Integer> duplicates(int arr[], int n) {
+        Arrays.sort(arr);
+        ArrayList<Integer> a = new ArrayList<Integer>();
+        int freq=1,num=arr[0];
+        int flag=0;
+        for(int i=1;i<n;i++)
+        {
+         if(num==arr[i])
+          freq++;
+         else
+         {
+          if(freq>1)
+          {
+           a.add(num);
+           flag=1;
+          }
+           num=arr[i];
+           freq=1;
+         }
+        }
+        if(freq>1)
+        {
+         a.add(num);
+         flag=1;
+        }
+        if(flag==0)
+         a.add(-1);
+        return a;
+    }
+}
