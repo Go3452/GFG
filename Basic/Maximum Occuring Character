@@ -1,0 +1,25 @@
+class Solution
+{
+    //Function to find the maximum occurring character in a string.
+    public static char getMaxOccuringChar(String line)
+    {
+     int freq[] = new int[26];
+     for(int i=0;i<line.length();i++)
+     {
+      int n = line.charAt(i)-'a';
+      freq[n]++;
+     }
+     int max=freq[0];
+     char ans='a';
+     for(int i=1;i<26;i++)
+     {
+      if(max<freq[i])
+      {
+       max=freq[i];
+       ans=(char)('a'+i);
+      }
+     }
+     return ans;
+    }
+    
+}
