@@ -1,0 +1,6 @@
+class Solution {
+    long sumOfSeries(long n) {
+        long ans=n*(n+1)/2;
+        return ans*ans;
+    }
+}
