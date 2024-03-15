@@ -1,0 +1,30 @@
+class Solution{
+    
+    // Function to find number of bits needed to be flipped to convert A to B
+    public static int countBitsFlip(int a, int b){
+        int count=0;
+      for(int i=0;a>0||b>0;i++)
+      {
+       if(a>0&&b>0)
+       {
+        if(a%2!=b%2)
+         count++;
+        a/=2;
+        b/=2;
+       }
+       else if(a>0)
+       {
+        if(a%2!=0)
+         count++;
+        a/=2;
+       }
+       else
+       {
+        if(b%2!=0)
+         count++;
+        b/=2;
+       }
+      }
+      return count;
+    }
+}
