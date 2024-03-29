@@ -1,0 +1,18 @@
+class Solution
+{
+     long floorSqrt(long x)
+	 {
+	  long i=0,j=x,ans=0;
+	  while(i<=j)
+	  {
+	   long mid=(i+j)/2;
+	   if(mid*mid==x)
+	    return mid;
+	   else if(mid*mid<x)
+	    i=mid+1;
+	   else
+	    j=mid-1;
+	  }
+	  return i-1;
+	 }
+}
