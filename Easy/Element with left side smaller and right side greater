@@ -1,0 +1,28 @@
+class Compute {
+    public int findElement(int arr[], int n){
+        int pre[] = new int[n];
+        int post[] = new int[n];
+        pre[0]=arr[0];
+        post[n-1]=arr[n-1];
+        for(int i=1;i<n;i++)
+        {
+         if(pre[i-1]>arr[i])
+          pre[i]=pre[i-1];
+         else
+          pre[i]=arr[i];
+        }
+        for(int i=n-2;i>=0;i--)
+        {
+         if(post[i+1]<arr[i])
+          post[i]=post[i+1];
+         else
+          post[i]=arr[i];
+        }
+        for(int i=1;i<n-1;i++)
+        {
+         if(arr[i]>=pre[i-1]&&arr[i]<=post[i+1])
+          return arr[i];
+        }
+        return -1;
+    }
+}
