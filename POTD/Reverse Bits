@@ -1,0 +1,17 @@
+class Solution {
+    static Long reversedBits(Long x) {
+     long ans=1;
+     for(int i=0;i<31;i++)
+      ans*=2;
+     long rev=0;
+     while(x>0)
+     {
+      long r=x%2;
+      if(r==1)
+       rev+=ans;
+      ans/=2;
+      x/=2;
+     }
+     return rev;
+    }
+};
