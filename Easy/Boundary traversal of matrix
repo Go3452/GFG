@@ -1,0 +1,42 @@
+class Solution
+{
+    static ArrayList<Integer> boundaryTraversal(int matrix[][], int n, int m)
+    {
+     ArrayList<Integer> arr = new ArrayList<Integer>();
+     int count=0;
+     if(n-2<=0||m-2<=0)
+      count=m*n;
+     else
+      count=n*m-(n-2)*(m-2);
+     int totalele=0;
+     int toprow=0,bottomrow=n-1,leftcol=0,rightcol=m-1;
+     while(totalele<count)
+     {
+      for(int j=leftcol;j<=rightcol&&totalele<count;j++)
+      {
+       arr.add(matrix[toprow][j]);
+       totalele++;
+      }
+      toprow++;
+      for(int i=toprow;i<=bottomrow&&totalele<count;i++)
+      {
+       arr.add(matrix[i][rightcol]);
+       totalele++;
+      }
+      rightcol--;
+      for(int j=rightcol;j>=leftcol&&totalele<count;j--)
+      {
+       arr.add(matrix[bottomrow][j]);
+       totalele++;
+      }
+      bottomrow--;
+      for(int i=bottomrow;i>=toprow&&totalele<count;i--)
+      {
+       arr.add(matrix[i][leftcol]);
+       totalele++;
+      }
+      leftcol++;
+     }
+     return arr;
+    }
+}
