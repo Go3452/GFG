@@ -1,0 +1,19 @@
+class Solution {
+    public int findPeakElement(List<Integer> a) {
+        int n=a.size();
+        if(a.get(0)>a.get(1))
+         return a.get(0);
+        if(a.get(n-1)>a.get(n-2))
+         return a.get(n-1);
+        int ans=0;
+        for(int i=1;i<n-1;i++)
+        {
+         if(a.get(i)>a.get(i-1)&&a.get(i)>a.get(i+1))
+         {
+          ans=a.get(i);
+          break;
+         }
+        }
+        return ans;
+    }
+}
