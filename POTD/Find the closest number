@@ -1,0 +1,31 @@
+class Solution {
+    public static int findClosest(int n, int k, int[] arr) {
+        int maxdiff=Integer.MAX_VALUE;
+        int diff=0;
+        int ans=0;
+        for(int i=0;i<n;i++)
+        {
+         if(arr[i]==k)
+         {
+          ans=k;
+          break;
+         }
+         if(k>arr[i])
+          diff=k-arr[i];
+         else
+          diff=arr[i]-k;
+         if(diff>maxdiff)
+          break;
+         else if(diff==maxdiff&&ans!=arr[i])
+         {
+          ans=arr[i];break;
+         }
+         else
+         {
+          maxdiff=diff;
+          ans=arr[i];
+         }
+        }
+        return ans;
+    }
+}
