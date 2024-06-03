@@ -1,0 +1,11 @@
+class Solution{
+    static String isValid(Long N){
+        if(N==0) return "YES";
+        else 
+        {
+         if(N<0) N=-N;
+         if(N%5==0) return "YES";
+         else return "NO";
+        }
+    }
+}
