@@ -1,0 +1,28 @@
+class Solution {
+    String binaryNextNumber(String s) {
+        int carry=1;
+        int n=s.length();
+        String nextNum="";
+        int k=0;
+        while(k<n&&s.charAt(k)=='0') k++;
+        if(k==n) return "1";
+        for(int i=n-1;i>=k;i--)
+        {
+         if(carry==0)
+         {
+          nextNum=s.substring(k,i+1)+nextNum;
+          break;
+         }
+         int num=0;
+         if(s.charAt(i)=='1') num++;
+         num+=carry;
+         carry=num/2;
+         num=num%2;
+         if(num==0) nextNum="0"+nextNum;
+         else nextNum="1"+nextNum;
+        }
+        if(carry==1)
+         nextNum="1"+nextNum;
+        return nextNum;
+    }
+}
