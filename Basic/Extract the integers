@@ -1,0 +1,25 @@
+class Solution 
+{ 
+    ArrayList<String> extractIntegerWords(String s) 
+    {
+     ArrayList<String> arr = new ArrayList<String>();
+     String S="";
+     int n=s.length();
+     for(int i=0;i<n;i++)
+     {
+      char ch = s.charAt(i);
+      if(ch>='0'&&ch<='9')
+       S+=ch;
+      else
+      {
+       if(S!="") 
+       {
+        arr.add(S);
+        S="";
+       }
+      }
+     }
+     if(S!="") arr.add(S);
+     return arr;
+    }
+}
