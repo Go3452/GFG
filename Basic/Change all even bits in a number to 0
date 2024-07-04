@@ -1,0 +1,18 @@
+class Solution {
+    static long convertEvenBitToZero(long n) {
+        long ans=0;
+        int count=0;
+        long pow=1;
+        while(n>0)
+        {
+         long r = n%2;
+         if(count%2==0)
+          r=0;
+         ans+=r*pow;
+         n/=2;
+         pow*=2;
+         count++;
+        }
+        return ans;
+    }
+}
