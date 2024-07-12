@@ -1,0 +1,32 @@
+class Solve {
+    int[] findTwoElement(int arr[], int n) {
+        Arrays.sort(arr);
+        int freq=1,num=arr[0],mis=1,rep=0,max=1;
+        if(mis==num) mis++;
+        for(int i=1;i<n;i++)
+        {
+         if(mis==arr[i])
+          mis++;
+         if(num==arr[i])
+          freq++;
+         else
+         {
+          if(freq>max)
+          {
+           rep=num;
+           max=freq;
+          }
+          freq=1;
+          num=arr[i];
+         }
+        }
+        if(freq>max)
+        {
+         rep=num;
+        }
+        int []ans = new int[2];
+         ans[0]=rep;
+         ans[1]=mis;
+        return ans;
+    }
+}
