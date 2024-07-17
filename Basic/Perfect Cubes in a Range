@@ -1,0 +1,15 @@
+class Solution{
+    static List<Integer> properCubes(int a, int b)
+    {
+     List<Integer> arr = new ArrayList<Integer>();
+     for(int i=a;i<=b;i++)
+     {
+      int n=(int)Math.cbrt(i);
+      if(n*n*n==i)
+       arr.add(i);
+     }
+     if(arr.size()==0)
+      arr.add(-1);
+     return arr;
+    }
+}
