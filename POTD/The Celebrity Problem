@@ -1,0 +1,25 @@
+class Solution {
+    // Function to find if there is a celebrity in the party or not.
+    public int celebrity(int mat[][]) {
+        int n=mat.length;
+        int []people = new int[n];
+        int []know = new int[n];
+        for(int i=0;i<n;i++)
+        {
+         for(int j=0;j<n;j++)
+         {
+          if(mat[i][j]==1)
+          {
+           people[j]++;
+           know[i]++;
+          }
+         }
+        }
+        for(int i=0;i<n;i++)
+        {
+         if(people[i]==n-1&&know[i]==0)
+          return i;
+        }
+        return -1;
+    }
+}
