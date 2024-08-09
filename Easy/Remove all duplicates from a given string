@@ -1,0 +1,37 @@
+class Solution {
+    String removeDuplicates(String str) {
+     int []freq1 = new int[26];
+     int []freq2 = new int[26];
+     int n=str.length();
+     for(int i=0;i<n;i++)
+     {
+      char ch=str.charAt(i);
+      if(ch>='a'&&ch<='z')
+       freq1[ch-'a']++;
+      else
+       freq2[ch-'A']++;
+     }
+     String ans="";
+     for(int i=0;i<n;i++)
+     {
+      char ch=str.charAt(i);
+      if(ch>='a'&&ch<='z')
+      {
+       if(freq1[ch-'a']!=0)
+       {
+        ans+=ch;
+        freq1[ch-'a']=0;
+       }
+      }
+       else
+       {
+        if(freq2[ch-'A']!=0)
+        {
+        ans+=ch;
+        freq2[ch-'A']=0;
+       }
+      }
+     }
+     return ans;
+    }
+}
