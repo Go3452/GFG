@@ -1,0 +1,25 @@
+class solve{
+    
+    //Function to generate binary numbers from 1 to N using a queue.
+    static ArrayList<String> generate(int N)
+    {
+     ArrayList<String> arr = new ArrayList<String>();
+     int i=1;
+     for(;i<=N;i++)
+     {
+      int num=i;
+      String ans="";
+      while(num>0)
+      {
+       if(num%2==1)
+        ans="1"+ans;
+       else
+        ans="0"+ans;
+       num/=2;
+      }
+      arr.add(ans);
+     }
+     return arr;
+    }
+    
+}
