@@ -1,0 +1,13 @@
+class Solution
+{
+    public int Nth_term(int a, int r, int n)
+    {
+     int m=1000000007;
+     long num=a;
+     for(int i=0;i<n-1;i++)
+     {
+      num=(num*r)%m;
+     }
+     return (int)num;
+    }
+}
