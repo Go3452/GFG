@@ -1,0 +1,6 @@
+class Solution{
+    int LastIndex(String s, char p){
+        int num = s.lastIndexOf(p);
+        return num;
+    }
+}
