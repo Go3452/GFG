@@ -1,0 +1,15 @@
+class Solution{
+    static int Count(String S)
+    {
+     int count=0,n=S.length();
+     for(int i=0;i<n;i++)
+     {
+      char ch=S.charAt(i);
+      if(ch>='a'&&ch<='z')
+       count++;
+      else if(ch>='A'&&ch<='Z')
+       count++;
+     }
+     return count;
+    }
+}
